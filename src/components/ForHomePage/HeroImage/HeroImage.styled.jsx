@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeroImgContainer = styled.div`
+export const HeroImageContainer = styled.div`
   picture {
     img {
       border-radius: 30px;
