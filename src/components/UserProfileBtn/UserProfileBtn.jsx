@@ -1,7 +1,7 @@
 import { useMediaQuery } from "react-responsive";
 // import { useAuth } from "../../hooks/useAuth";
-import sprite from "../../assets/icons/icons.svg";
-import { UserLinkBtn, UserName } from "./UserProfile.styled";
+import sprite from "../../assets/icons/sprite.svg";
+import { UserLinkBtn, UserName } from "./UserProfileBtn.styled";
 
 const UserProfileBtn = ({ isHomepage }) => {
 //   const tablet = useMediaQuery({ minWidth: 768 });

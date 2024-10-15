@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import sprite from "../../../assets/icons/icons.svg";
+import sprite from "../../../assets/icons/sprite.svg";
 import { LogoContainer } from "./Logo.styled";
 
 const Logo = ({ isHomepage }) => {
