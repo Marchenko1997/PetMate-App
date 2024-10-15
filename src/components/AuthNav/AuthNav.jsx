@@ -8,7 +8,7 @@ const AuthNav = ({ setIsShowMobileMenu }) => {
         Log in
       </LoginBtn>
       <RegisterBtn to="/register" onClick={handleClick}>
-        Register
+        Registration
       </RegisterBtn>
     </ButtonsAuthContainer>
   );

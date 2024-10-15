@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 export const MainHeader = styled.header`
@@ -20,23 +21,23 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: ${({ ishomepage }) =>
-    ishomepage === "true" ? "24px 20px 22px 20px" : "24px 0px 22px 0px"};
-  background-color: ${({ ishomepage }) =>
-    ishomepage === "true" ? "var(--accent-color)" : "transparent"};
+  padding: ${({ isHomepage }) =>
+    isHomepage === "true" ? "24px 20px 22px 20px" : "24px 0px 22px 0px"};
+  background-color: ${({ isHomepage }) =>
+    isHomepage === "true" ? "var(--accent-color)" : "transparent"};
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
   @media screen and (min-width: 768px) {
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-    padding: ${({ ishomepage }) =>
-      ishomepage === "true" ? "27px 32px 62px 32px" : "27px 0px 62px 0px"};
+    padding: ${({ isHomepage }) =>
+      isHomepage === "true" ? "27px 32px 62px 32px" : "27px 0px 62px 0px"};
   }
 
   @media screen and (min-width: 1280px) {
-    padding: ${({ ishomepage }) =>
-      ishomepage === "true" ? "27px 64px 32px 64px" : "27px 32px 32px 32px"};
+    padding: ${({ isHomepage }) =>
+      isHomepage === "true" ? "27px 64px 32px 64px" : "27px 32px 32px 32px"};
   }
 `;
 

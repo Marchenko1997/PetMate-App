@@ -15,7 +15,7 @@ const Header = () => {
   const [isHomepage, setIsHomepage] = useState(false);
   
   useEffect(() => {
-    if (location.pathname === "/" || location.pathname === "/home") {
+    if (location.pathname === "/home" || location.pathname === "/") {
       setIsHomepage(true);
     } else {
       setIsHomepage(false);
@@ -29,7 +29,7 @@ const Header = () => {
         <Logo isHomepage={isHomepage} />
         {desktop && <NavMenu isHomepage={isHomepage} />}
           <BlockBtns>
-        
+          <AuthNav />
           </BlockBtns >
         </HeaderContainer>
     </MainHeader>
