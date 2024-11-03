@@ -1,19 +1,27 @@
 // @ts-nocheck
-// import { useState } from "react";
+import { useState } from "react";
 import AvatarData from "./UserData/AvatarData/AvatarData";
 import MyInformation from "./UserData/MyInformation/MyInformation";
-
-
+import MyPetsTitle from "./MyPetsTitle/MyPetsTitle";
+import Logout from "./Logout/Logout";
+import ModalLogout from "./ModalLogout/ModalLogout";
+import PetsList from "./PetsList/PetsList";
 
 const UserInformation = ({ setshowEditForm }) => {
-    
-     
-  return (
-      <div>
-          <AvatarData setShowEditForm={setshowEditForm} />
-          <MyInformation />
-    </div>
-  )
-}
+  const [showLogout, setShowLogout] = useState(false);
 
-export default UserInformation
+  return (
+    <div>
+      <AvatarData setShowEditForm={setshowEditForm} />
+      <MyInformation />
+      <MyPetsTitle />
+      <PetsList />
+      <Logout setShowLogout={setShowLogout} />
+      {setShowLogout && (
+        <ModalLogout setShowLogout={setShowLogout} showLogout={showLogout} />
+      )}
+    </div>
+  );
+};
+
+export default UserInformation;
