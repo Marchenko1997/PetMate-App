@@ -21,6 +21,16 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="home" element={<HomePage />} />
           <Route
+            path="profile"
+            element={
+              <PrivateRoute redirectTo="/home" component={<Profile />} />
+            }
+          >
+            <Route index element={<Favorites />} />
+            <Route path="favorites" element={<Favorites />} />
+            <Route path="viewed" element={<Viewed />} />
+          </Route>
+          <Route
             path="/login"
             element={
               <RestrictedRoute redirectTo="/profile" component={<Login />} />
