@@ -15,3 +15,4 @@ const NavMenu = ({ isHomepage }) => {
 };
 
 export default NavMenu;
+
