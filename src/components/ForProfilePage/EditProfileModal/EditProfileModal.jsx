@@ -2,7 +2,7 @@
 import  { useState, useEffect } from "react";
 import ModalGeneral from "../../ModalGeneral/ModalGeneral";
 import { useAuth } from "../../../hooks/useAuth";
-import sprite from "../../../assets/icons/icons.svg";
+import sprite from "../../../assets/icons/sprite.svg";
 import { EditModalContainer, AvatarBox } from "./EditProfileModal.styled";
 import FormEditUser from "./FormEditUser/FormEditUser";
 

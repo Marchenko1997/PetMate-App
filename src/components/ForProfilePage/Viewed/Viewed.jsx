@@ -6,6 +6,7 @@ import ViewedList from "./ViewedList/ViewedList";
 
 const Viewed = () => {
   const { viewedNotices } = useAuth();
+
   return (
     <div>
       {viewedNotices?.length === 0 ? (

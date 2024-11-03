@@ -1,10 +1,11 @@
-import { LogoutButtom } from "./Logout.styled";
+import { LogoutBtn } from "./Logout.styled";
 
-
-const Logout = ({setShowLogout}) => {
+const Logout = ({ setShowLogout }) => {
   return (
-    <LogoutButtom type="button" onClick ={() => setShowLogout(true)}>logout</LogoutButtom>
-  )
-}
+    <LogoutBtn type="button" onClick={() => setShowLogout(true)}>
+      logout
+    </LogoutBtn>
+  );
+};
 
-export default Logout
+export default Logout;

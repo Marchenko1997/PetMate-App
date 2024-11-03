@@ -6,6 +6,7 @@ import { ListFavorites } from "../../Favorites/Favorites.styled";
 const ViewedList = () => {
   const { viewedNotices } = useAuth();
   const [, setShowFirstNotification] = useState(false);
+
   return (
     <ListFavorites>
       {viewedNotices.map((notice) => (

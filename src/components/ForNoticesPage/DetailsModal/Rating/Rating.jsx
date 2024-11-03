@@ -1,5 +1,5 @@
 
-import sprite from "../../../../assets/icons/icons.svg";
+import sprite from "../../../../assets/icons/sprite.svg";
 import { RatingContainer } from "./Rating.styled";
 
 const Rating = ({ popularity }) => {

@@ -2,7 +2,7 @@
 import { useDispatch } from "react-redux";
 import PetInfo from "../PetInfo/PetInfo";
 import { removePet } from "../../../../redux/auth/operations";
-import sprite from "../../../../assets/icons/icons.svg";
+import sprite from "../../../../assets/icons/sprite.svg";
 import {
   ItemContainer,
   PetImgBox,

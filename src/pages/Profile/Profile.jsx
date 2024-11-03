@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, Suspense, useEffect } from "react";
+import { useState, Suspense, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { HomePageSection } from "../Home/HomePage.styled";
@@ -31,7 +31,7 @@ const Profile = () => {
         <DesktopBox>
           <Container>
             <UserAndEditBtns setShowEditForm={setShowEditForm} />
-            <UserInformation setshowEditForm={setShowEditForm} />
+            <UserInformation setShowEditForm={setShowEditForm} />
           </Container>
           <div>
             <LinksCollections />

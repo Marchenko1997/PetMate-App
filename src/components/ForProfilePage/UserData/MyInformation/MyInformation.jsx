@@ -4,7 +4,7 @@ import { MyInfoContainer } from "./MyInformation.styled";
 
 
 const MyInformation = () => {
-    const { user } = useAuth();
+  const { user } = useAuth();
 
   return (
     <MyInfoContainer>
@@ -22,6 +22,6 @@ const MyInformation = () => {
       </ul>
     </MyInfoContainer>
   );
-}
+};
 
-export default MyInformation
+export default MyInformation;

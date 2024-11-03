@@ -6,7 +6,7 @@ import { formatBirthday } from "../../../functions/formatBirthday";
 import { useAuth } from "../../../hooks/useAuth";
 import DetailsModal from "../DetailsModal/DetailsModal";
 import { viewedPet } from "../../../redux/auth/operations";
-import sprite from "../../../assets/icons/icons.svg";
+import sprite from "../../../assets/icons/sprite.svg";
 import {
   BtnLike,
   ButtonLearnMore,

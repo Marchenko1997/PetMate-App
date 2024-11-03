@@ -6,7 +6,7 @@ import {
   AddToFavorites,
   RemoveFromFavorites,
 } from "../../../../redux/notices/operations";
-import sprite from "../../../../assets/icons/icons.svg";
+import sprite from "../../../../assets/icons/sprite.svg";
 import { AddRemoveBtn, ButtonsContainer, ContactBtn } from "./Buttons.styled";
 
 const Buttons = ({

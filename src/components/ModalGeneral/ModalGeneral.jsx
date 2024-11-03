@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { useRef } from "react";
 import { createPortal } from "react-dom";
-import sprite from "../../assets/icons/icons.svg";
+import sprite from "../../assets/icons/sprite.svg";
 import { Backdrop, ModalContainer, CloseBtn } from "./ModalGeneral.styled";
 
 const Modal = ({ children, fn }) => {

@@ -1,5 +1,5 @@
 import  { useState, useEffect } from "react";
-import sprite from "../../assets/icons/icons.svg";
+import sprite from "../../assets/icons/sprite.svg";
 import Loader from "../Loader/Loader";
 import { MainScreenContainer } from "./MainScreen.styled";
 

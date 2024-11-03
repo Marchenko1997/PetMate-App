@@ -13,13 +13,8 @@ import {
 
 const ModalLogout = ({ setShowLogout, showLogout }) => {
   const dispatch = useDispatch();
-  const handleCloseModal = () => {
-    setShowLogout(false);
-  };
-
-  const handleLogout = () => {
-    dispatch(logOut());
-  };
+  const handleCloseModal = () => setShowLogout(false);
+  const handleLogout = () => dispatch(logOut());
 
   useEffect(() => {
     const handleKeyPress = (e) => {
@@ -51,16 +46,18 @@ const ModalLogout = ({ setShowLogout, showLogout }) => {
         <div>
           <img src={imgModal} alt="Animated white-orange cat" />
         </div>
+        <p>Already leaving?</p>
       </ImgContainer>
       <BtnsBox>
         <LogoutConfirmBtn type="button" onClick={handleLogout}>
           Yes
         </LogoutConfirmBtn>
         <CancelBtn type="button" onClick={handleCloseModal}>
-          No
+          Cancel
         </CancelBtn>
       </BtnsBox>
     </ModalGeneral>
   );
 };
+
 export default ModalLogout;

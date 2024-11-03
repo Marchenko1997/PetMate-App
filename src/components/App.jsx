@@ -2,7 +2,7 @@ import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import SharedLayout from "./SharedLayout/SharedLayout.jsx";
 import { RestrictedRoute } from "./RestrictedRoute.jsx";
-import { PrivateRoute } from "./PrivateRoute";
+import  PrivateRoute  from "./PrivateRoute.jsx";
 
 const HomePage = lazy(() => import("../pages/Home/HomePage.jsx"));
 const Login = lazy(() => import("../pages/Login/Login.jsx"));

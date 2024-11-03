@@ -27,3 +27,4 @@ const PetInfo = ({ pet }) => {
 };
 
 export default PetInfo;
+
