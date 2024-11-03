@@ -3,9 +3,9 @@
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { schema } from "../../../../schemas/schemas";
-import { editUser } from "../../../../redux/auth/operations";
-import { useAuth } from "../../../../hooks/useAuth";
+import { schema } from "../../../../schemas/schemas.js";
+import { editUser } from "../../../../redux/auth/operations.js";
+import { useAuth } from "../../../../hooks/useAuth.js";
 import sprite from "../../../../assets/icons/sprite.svg";
 import { ErrorMsg } from "../../../ForAddPetPage/CreationForm/CreationForm.styled.jsx";
 import {
@@ -15,7 +15,7 @@ import {
   InputStandart,
   Label,
   SubmitBtn,
-} from "./FormEditUser.styled";
+} from "./FormEditUser.styled.jsx";
 
 const FormEditUser = ({ setImageURL, setShowEditForm }) => {
   const dispatch = useDispatch();
