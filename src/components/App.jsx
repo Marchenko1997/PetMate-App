@@ -8,6 +8,7 @@ const HomePage = lazy(() => import("../pages/Home/HomePage.jsx"));
 const Login = lazy(() => import("../pages/Login/Login.jsx"));
 const Register = lazy(() => import("../pages/Register/Register.jsx"));
 const Profile = lazy(() => import("../pages/Profile/Profile"));
+const AddPet = lazy(() => import("../pages/AddPet/AddPet"));
 const Favorites = lazy(() =>
   import("../components/ForProfilePage/Favorites/Favorites")
 );
@@ -30,6 +31,10 @@ const App = () => {
             <Route path="favorites" element={<Favorites />} />
             <Route path="viewed" element={<Viewed />} />
           </Route>
+          <Route
+            path="add-pet"
+            element={<PrivateRoute redirectTo="/home" component={<AddPet />} />}
+          />
           <Route
             path="/login"
             element={
