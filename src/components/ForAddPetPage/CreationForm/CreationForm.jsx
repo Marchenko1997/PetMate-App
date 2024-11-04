@@ -53,7 +53,7 @@ const CreationForm = () => {
   };
 
   useEffect(() => {
-    if (sexPet === "unknown") setValue("sex", setSexPet);
+    if (sexPet === "unknown") setValue("sex", sexPet);
 
     if (petType) setValue("species", petType);
 
