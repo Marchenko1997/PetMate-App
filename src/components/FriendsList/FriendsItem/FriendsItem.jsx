@@ -1,4 +1,4 @@
-import React from "react";
+
 import { workHours } from "../../../functions/workHours";
 import {
   CardContainer,
@@ -6,10 +6,10 @@ import {
   InfoLink,
   ListDetails,
   LogoCompany,
-} from "./FriendItem.styled";
+} from "./FriendsItem.styled";
 
 
-const FriendItem = ({ friend }) => {
+const FriendsItem = ({ friend }) => {
   const { address, addressUrl, email, imageUrl, phone, title, url, workDays } =
     friend;
   const workingHours = workHours(workDays);
@@ -47,4 +47,4 @@ const FriendItem = ({ friend }) => {
   );
 };
 
-export default FriendItem;
+export default FriendsItem;

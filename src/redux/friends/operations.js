@@ -2,7 +2,7 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-axios.defaults.baseURL = import.meta.env.REACT_APP_BASE_URL;
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 // GET ALL OUR FRIENDS FROM BACKEND
 export const fetchFriends = createAsyncThunk(

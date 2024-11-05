@@ -12,6 +12,7 @@ const AddPet = lazy(() => import("../pages/AddPet/AddPet"));
 const Favorites = lazy(() =>
   import("../components/ForProfilePage/Favorites/Favorites")
 );
+const Friends = lazy(() => import("../pages/Friends/Friends"));
 const Viewed = lazy(() => import("../components/ForProfilePage/Viewed/Viewed"));
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="home" element={<HomePage />} />
+          <Route path="friends" element={<Friends />} />
           <Route
             path="profile"
             element={
