@@ -1,32 +1,32 @@
+
 import Select from "react-select";
 import { useMediaQuery } from "react-responsive";
 import { useNotices } from "../../../../hooks/useNotices";
 
-
 const ByGenderSelect = ({ setGenderQuery, genderQuery, setCurrentPage }) => {
-     const tablet = useMediaQuery({ minWidth: 768 });
-     const tabletEnd = useMediaQuery({ maxWidth: 1279.98 });
-    const desktop = useMediaQuery({ minWidth: 1280 });
-    const { genders } = useNotices();
+  const tablet = useMediaQuery({ minWidth: 768 });
+  const tabletEnd = useMediaQuery({ maxWidth: 1279.98 });
+  const desktop = useMediaQuery({ minWidth: 1280 });
+  const { genders } = useNotices();
 
-    const gendersData = [
-        { value: "", label: "Show All" },
-        ...genders?.map((item) => ({
-            value: item,
-            label: item?.chart(0).toUpperCase() + item?.slice(1),
-        }))
- ]
+  const gendersData = [
+    { value: "", label: "Show all" },
+    ...genders?.map((item) => ({
+      value: item,
+      label: item?.charAt(0).toUpperCase() + item?.slice(1),
+    })),
+  ];
 
-    const handleChangeGender = (e) => {
-        setGenderQuery(e?.value);
-        setCurrentPage(1);
-    } 
-    
-    const selectValue =
-        genderQuery === null
-            ? null
-            : gendersData.find((option) => option.value === genderQuery)
-    
+  const handleChangeGender = (e) => {
+    setGenderQuery(e?.value);
+    setCurrentPage(1);
+  };
+
+  const selectValue =
+    genderQuery === null
+      ? null
+      : gendersData.find((option) => option.value === genderQuery);
+
   return (
     <div>
       <Select
@@ -88,6 +88,6 @@ const ByGenderSelect = ({ setGenderQuery, genderQuery, setCurrentPage }) => {
       />
     </div>
   );
-}
+};
 
-export default ByGenderSelect
+export default ByGenderSelect;

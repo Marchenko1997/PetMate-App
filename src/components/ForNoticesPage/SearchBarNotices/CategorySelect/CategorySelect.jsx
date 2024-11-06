@@ -12,20 +12,21 @@ const CategorySelect = ({
   const desktop = useMediaQuery({ minWidth: 1280 });
   const { categories } = useNotices();
   const categoriesData = [
-    { value: "", label: "Show All" },
+    { value: "", label: "Show all" },
     ...categories?.map((item) => ({
       value: item,
-      label: item?.chart(0).toUpperCase() + item?.slice(1),
+      label: item?.charAt(0).toUpperCase() + item?.slice(1),
     })),
   ];
+
   const handleChangeCategory = (selectedOption) => {
-    setCategoryQuery(selectedOption.value);
+    setCategoryQuery(selectedOption?.value);
     setCurrentPage(1);
   };
 
   const selectValue =
     categoryQuery === null
-      ? null
+      ? null // Set to default value
       : categoriesData.find((option) => option.value === categoryQuery);
 
   return (

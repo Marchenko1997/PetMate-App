@@ -1,15 +1,17 @@
+
 import Select from "react-select";
 import { useMediaQuery } from "react-responsive";
 import { useNotices } from "../../../../hooks/useNotices";
 
-const ByTypeSelcet = ({ setByTypeQuery, byTypeQuery, setCurrentPage }) => {
+const ByTypeSelect = ({ setByTypeQuery, byTypeQuery, setCurrentPage }) => {
   const tablet = useMediaQuery({ minWidth: 768 });
   const { species } = useNotices();
+
   const speciesData = [
-    { value: "", label: "Show All" },
+    { value: "", label: "Show all" },
     ...species?.map((item) => ({
       value: item,
-      label: item?.chart(0).toUpperCase() + item?.slice(1),
+      label: item?.charAt(0).toUpperCase() + item?.slice(1),
     })),
   ];
 
@@ -17,7 +19,6 @@ const ByTypeSelcet = ({ setByTypeQuery, byTypeQuery, setCurrentPage }) => {
     setByTypeQuery(e?.value);
     setCurrentPage(1);
   };
-
   const selectValue =
     byTypeQuery === null
       ? null
@@ -87,4 +88,4 @@ const ByTypeSelcet = ({ setByTypeQuery, byTypeQuery, setCurrentPage }) => {
   );
 };
 
-export default ByTypeSelcet;
+export default ByTypeSelect;

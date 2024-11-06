@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useState } from "react";
+import  { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
   AddToFavorites,
@@ -12,9 +12,8 @@ import { Text } from "../../ForProfilePage/NoCollectionText/NoCollectionText.sty
 import Attention from "../Attention/Attention";
 import FirstItemNotification from "../FirstItemNotification/FirstItemNotification";
 
-
 const AnimalsList = () => {
-  const { notices } = useNotices;
+  const { notices } = useNotices();
   const dispatch = useDispatch();
   const [showAttention, setShowAttention] = useState(false);
   const [showFirstNotification, setShowFirstNotification] = useState(false);
@@ -50,7 +49,7 @@ const AnimalsList = () => {
         {notices?.map((notice) => (
           <Card
             notice={notice}
-            key={notice._id}
+            key={notice?._id}
             setShowAttention={setShowAttention}
             setShowFirstNotification={setShowFirstNotification}
             onAddFavorites={handleAddFavorites}

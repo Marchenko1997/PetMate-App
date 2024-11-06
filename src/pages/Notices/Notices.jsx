@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import SearchBarNotices from "../../components/ForNoticesPage/SearchBarNotices/SearchBarNotices";
 import {

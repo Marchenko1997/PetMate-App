@@ -1,5 +1,5 @@
 import { components } from "react-select";
-import sprite from "../../../../assets/icons/icons.svg";
+import sprite from "../../../../assets/icons/sprite.svg";
 
 
 export const DropdownIndicator = (props) => {

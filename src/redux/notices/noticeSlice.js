@@ -11,15 +11,15 @@ import {
 import { fetchNotices } from "./filtration";
 
 const initialState = {
-    notices: [],
-    categories: [],
-    genders: [],
-    species: [],
-    cities: [],
-    isLoading: false,
-    isError: false,
-    totalPages: 1,
-}
+  notices: [],
+  categories: [],
+  genders: [],
+  species: [],
+  cities: [],
+  isLoading: false,
+  isError: false,
+  totalPages: 1,
+};
 
 const isPending = (state) => {
   state.isLoading = true;
