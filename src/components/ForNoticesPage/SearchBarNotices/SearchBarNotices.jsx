@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import CategorySelect from "./CategorySelect/CategorySelect";
 import ByGenderSelect from "./ByGenderSelect/ByGenderSelect";
@@ -63,8 +63,8 @@ const SearchBarNotices = ({ currentPage, setCurrentPage }) => {
       <TextInput
         setTextQuery={setTextQuery}
         textQuery={textQuery}
-        setInputValue={setInputValue}
         inputValue={inputValue}
+        setInputValue={setInputValue}
         setCurrentPage={setCurrentPage}
       />
       <SelectContainer>
@@ -82,6 +82,11 @@ const SearchBarNotices = ({ currentPage, setCurrentPage }) => {
       <ByTypeSelect
         setByTypeQuery={setByTypeQuery}
         byTypeQuery={byTypeQuery}
+        setCurrentPage={setCurrentPage}
+      />
+      <SearchLocation
+        setLocationQuery={setLocationQuery}
+        locationQuery={locationQuery}
         setCurrentPage={setCurrentPage}
       />
       <RadioSection

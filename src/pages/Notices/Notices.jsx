@@ -17,9 +17,39 @@ import { HomePageSection } from "../Home/HomePage.styled";
 import { TitleOfPage } from "../../components/Common/TitlePage/TitlePage";
 
 const Notices = () => {
-  return (
-    <div>Notices</div>
-  )
-}
+  const [currentPage, setCurrentPage] = useState(1);
+  const { totalPagesNotices, isLoadNotices } = useNotices();
+  const dispatch = useDispatch();
 
-export default Notices
+  useEffect(() => {
+    dispatch(fetchCategories());
+    dispatch(fetchGenders());
+    dispatch(fetchCities());
+  }, []);
+
+  return (
+    <HomePageSection>
+      <TitleOfPage>Find your favorite pet</TitleOfPage>
+      <SearchBarNotices
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
+      {isLoadNotices ? (
+        <LoaderNewsBox>
+          <LoaderMain />
+        </LoaderNewsBox>
+      ) : (
+        <>
+          <AnimalsList />
+          <PaginationGeneral
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            totalPages={totalPagesNotices}
+          />
+        </>
+      )}
+    </HomePageSection>
+  );
+};
+
+export default Notices;

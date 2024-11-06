@@ -7,13 +7,13 @@ import {
 } from "../../../redux/notices/operations";
 import { useNotices } from "../../../hooks/useNotices";
 import Card from "../Card/Card";
-import { ListOfNotices } from "./AnimalList.styled";
+import { ListOfNotices } from "./AnimalsList.styled";
 import { Text } from "../../ForProfilePage/NoCollectionText/NoCollectionText.styled";
 import Attention from "../Attention/Attention";
 import FirstItemNotification from "../FirstItemNotification/FirstItemNotification";
 
 
-const AnimalList = () => {
+const AnimalsList = () => {
   const { notices } = useNotices;
   const dispatch = useDispatch();
   const [showAttention, setShowAttention] = useState(false);
@@ -62,4 +62,4 @@ const AnimalList = () => {
   );
 };
 
-export default AnimalList;
+export default AnimalsList;
