@@ -8,6 +8,7 @@ const HomePage = lazy(() => import("../pages/Home/HomePage.jsx"));
 const Login = lazy(() => import("../pages/Login/Login.jsx"));
 const Register = lazy(() => import("../pages/Register/Register.jsx"));
 const Notices = lazy(() => import("../pages/Notices/Notices"));
+const News = lazy(() => import("../pages/News/News.jsx"))
 const Profile = lazy(() => import("../pages/Profile/Profile"));
 const AddPet = lazy(() => import("../pages/AddPet/AddPet"));
 const Favorites = lazy(() =>
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="home" element={<HomePage />} />
           <Route path="friends" element={<Friends />} />
           <Route path="notices" element={<Notices />} />
+          <Route path="news" element={<News />} />
           <Route
             path="profile"
             element={
