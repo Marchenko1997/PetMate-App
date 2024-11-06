@@ -2,7 +2,6 @@ import Select from "react-select";
 import { useMediaQuery } from "react-responsive";
 import { useNotices } from "../../../../hooks/useNotices";
 
-
 const ByTypeSelcet = ({ setByTypeQuery, byTypeQuery, setCurrentPage }) => {
   const tablet = useMediaQuery({ minWidth: 768 });
   const { species } = useNotices();

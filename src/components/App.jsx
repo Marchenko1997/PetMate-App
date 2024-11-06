@@ -7,6 +7,7 @@ import  PrivateRoute  from "./PrivateRoute.jsx";
 const HomePage = lazy(() => import("../pages/Home/HomePage.jsx"));
 const Login = lazy(() => import("../pages/Login/Login.jsx"));
 const Register = lazy(() => import("../pages/Register/Register.jsx"));
+const Notices = lazy(() => import("../pages/Notices/Notices"));
 const Profile = lazy(() => import("../pages/Profile/Profile"));
 const AddPet = lazy(() => import("../pages/AddPet/AddPet"));
 const Favorites = lazy(() =>
@@ -23,6 +24,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="home" element={<HomePage />} />
           <Route path="friends" element={<Friends />} />
+          <Route path="notices" element={<Notices />} />
           <Route
             path="profile"
             element={
