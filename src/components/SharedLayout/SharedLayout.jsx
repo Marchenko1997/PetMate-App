@@ -1,7 +1,7 @@
 // @ts-nocheck
 import  { Suspense, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-// import { ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { Outlet, useLocation } from "react-router-dom";
 import { fetchSpecies } from "../../redux/notices/operations";
 import LoaderMain, { LoaderContainer } from "../Common/LoaderMain/LoaderMain";
@@ -35,7 +35,7 @@ const SharedLayout = () => {
           <Outlet />
         </Suspense>
       </main>
-      {/* <ToastContainer /> */}
+      <ToastContainer />
     </>
   );
 };

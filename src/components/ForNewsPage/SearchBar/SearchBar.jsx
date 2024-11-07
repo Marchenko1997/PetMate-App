@@ -37,7 +37,7 @@ const SearchBar = ({ setSearchValue, searchValue, setCurrentPage }) => {
     <SearchForm onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Seatch"
+        placeholder="Search"
         value={inputValue}
         onChange={handleInputChange}
         disabled={searchValue === "" ? false : true}
