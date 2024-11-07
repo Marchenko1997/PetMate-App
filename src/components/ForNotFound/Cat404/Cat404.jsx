@@ -37,12 +37,12 @@ const Cat404 = () => {
           />
           <img src={cat} alt="One cute cat" />
         </picture>
-          </CatImgBox>
-          <IconBox>
-              <svg>
-            <use xlinkHref="${sprite}#icon-four"></use>
-            </svg>
-        </IconBox>
+      </CatImgBox>
+      <IconBox>
+        <svg>
+          <use xlinkHref={`${sprite}#icon-four`}></use>
+        </svg>
+      </IconBox>
     </ContainerContent>
   );
 };

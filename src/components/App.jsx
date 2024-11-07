@@ -1,32 +1,42 @@
-import { lazy } from "react";
+// @ts-nocheck
+import { lazy, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import SharedLayout from "./SharedLayout/SharedLayout.jsx";
-import { RestrictedRoute } from "./RestrictedRoute.jsx";
-import { PrivateRoute }  from "./PrivateRoute.jsx";
+import { useDispatch } from "react-redux";
+import { refreshUser } from "../redux/auth/operations";
+import SharedLayout from "./SharedLayout/SharedLayout";
+import { RestrictedRoute } from "./RestrictedRoute";
+import { PrivateRoute } from "./PrivateRoute";
 
-const HomePage = lazy(() => import("../pages/Home/HomePage.jsx"));
-const Login = lazy(() => import("../pages/Login/Login.jsx"));
-const Register = lazy(() => import("../pages/Register/Register.jsx"));
+const HomePage = lazy(() => import("../pages/Home/HomePage"));
+const News = lazy(() => import("../pages/News/News"));
 const Notices = lazy(() => import("../pages/Notices/Notices"));
-const News = lazy(() => import("../pages/News/News.jsx"))
+const Friends = lazy(() => import("../pages/Friends/Friends"));
+const Login = lazy(() => import("../pages/Login/Login"));
+const Register = lazy(() => import("../pages/Register/Register"));
+const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 const Profile = lazy(() => import("../pages/Profile/Profile"));
 const AddPet = lazy(() => import("../pages/AddPet/AddPet"));
 const Favorites = lazy(() =>
   import("../components/ForProfilePage/Favorites/Favorites")
 );
-const Friends = lazy(() => import("../pages/Friends/Friends"));
 const Viewed = lazy(() => import("../components/ForProfilePage/Viewed/Viewed"));
 
-const App = () => {
+function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
   return (
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="home" element={<HomePage />} />
-          <Route path="friends" element={<Friends />} />
-          <Route path="notices" element={<Notices />} />
           <Route path="news" element={<News />} />
+          <Route path="notices" element={<Notices />} />
+          <Route path="friends" element={<Friends />} />
           <Route
             path="profile"
             element={
@@ -53,10 +63,12 @@ const App = () => {
               <RestrictedRoute redirectTo="/profile" component={<Register />} />
             }
           />
+          <Route path="*" element={<NotFound />} />
+          <Route />
         </Route>
       </Routes>
     </>
   );
-};
+}
 
 export default App;
