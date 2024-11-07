@@ -45,6 +45,6 @@ const Cat404 = () => {
       </IconBox>
     </ContainerContent>
   );
-};
+}; 
 
 export default Cat404;

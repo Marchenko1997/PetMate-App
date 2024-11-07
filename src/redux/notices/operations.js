@@ -51,16 +51,22 @@ export const fetchSpecies = createAsyncThunk(
 // GET CITIES LOCATIONS FOR SELECT
 export const fetchCities = createAsyncThunk(
   "cities/fetchAll",
-  async (thunkAPI) => {
+  async ({ keyword = "rek" } = {}, thunkAPI) => {
     try {
-      const response = await axios.get("/cities");
+      let response = await axios.get(`/cities`, {
+        params: { keyword },
+      });
+
+      if (!response.data || response.data.length === 0) {
+        response = await axios.get("/cities/locations");
+      }
+
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
-
 // ADD NOTICE TO FAVORITES
 export const AddToFavorites = createAsyncThunk(
   "notices/addFavorites",

@@ -14,7 +14,12 @@ import TextInput from "./TextInput/TextInput";
 import RadioSection from "./RadioSection/RadioSection";
 import { fetchNotices } from "../../../redux/notices/filtration";
 
-const SearchBarNotices = ({ currentPage, setCurrentPage }) => {
+const SearchBarNotices = ({
+  currentPage,
+  setCurrentPage,
+  cityKeyword,
+  onKeywordChange,
+}) => {
   const [radioSearch, setRadioSearch] = useState(null);
   const [categoryQuery, setCategoryQuery] = useState(null);
   const [genderQuery, setGenderQuery] = useState(null);
@@ -88,6 +93,8 @@ const SearchBarNotices = ({ currentPage, setCurrentPage }) => {
         setLocationQuery={setLocationQuery}
         locationQuery={locationQuery}
         setCurrentPage={setCurrentPage}
+        onKeywordChange={onKeywordChange} 
+        cityKeyword={cityKeyword}
       />
       <RadioSection
         setRadioSearch={setRadioSearch}

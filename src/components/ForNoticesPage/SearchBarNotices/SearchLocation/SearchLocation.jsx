@@ -8,10 +8,14 @@ const SearchLocation = ({
   setLocationQuery,
   locationQuery,
   setCurrentPage,
+  onKeywordChange,
+  cityKeyword,
 }) => {
   const tablet = useMediaQuery({ minWidth: 768 });
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(cityKeyword || "");
   const { cities } = useNotices();
+
+
   let filteredCities;
 
   if (inputValue?.length >= 3) {
@@ -40,11 +44,18 @@ const SearchLocation = ({
     );
   };
 
-  const handleByCity = (value) => {
-    setTimeout(() => setInputValue(value), 600);
-  };
+ const handleByCity = (value) => {
+   setTimeout(() => {
+     setInputValue(value);
+     if (onKeywordChange) {
+       onKeywordChange(value);
+     }
+   }, 600);
+ };
+
 
   const handleChangeLocation = (e) => {
+  
     setLocationQuery(e?.value);
     setCurrentPage(1);
   };
